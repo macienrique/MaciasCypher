@@ -33,6 +33,8 @@ def update_task(msg):
 
     return jsonify({'task': msgFinal})
 
-
+@app.route('/')
+def hello():
+    return '\nHello World! times\n' 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0",debug=True)
