@@ -1,0 +1,43 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: id-blockchain-proxycrypto
+  labels:
+    product: identidad
+    app: blockchainproxycrypto
+    tier: proxycrypto
+    phase: uat
+    deployment: v1  
+spec:
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        product: identidad
+        app: blockchainproxycrypto
+        tier: proxycrypto
+        phase: uat
+        deployment: v1
+    spec:
+      containers:
+      - image: us.gcr.io/everisconf/proxycrypto:v1.0
+        name: id-blockchain-proxycrypto
+        imagePullPolicy: Always
+        resources:
+            requests:
+              memory: "256Mi"
+            limits:
+              memory: "2048Mi"
+        env:
+        - name: HOST_LOGSTASH
+          value: "52.225.224.83"
+        ports:
+        - containerPort: 5000
+          name: http
+          protocol: TCP
+        livenessProbe:
+          tcpSocket:
+            port: 5000
+          initialDelaySeconds: 60
+          periodSeconds: 30
