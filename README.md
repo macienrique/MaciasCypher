@@ -1,5 +1,8 @@
 # NuCypher's Proxy Re-Encryption and Umbral
 
+Link to their work (Proxy Re-Encryption): [Proxy Re-Encryption](https://blog.nucypher.com/proxy-re-encryption-playground-in-python-3bc66170b9bf)
+
+Link to their work (Umbral): [Umbral](https://github.com/nucypher/pyUmbral)
 
 ## USE CASE
 
