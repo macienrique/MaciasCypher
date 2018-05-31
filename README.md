@@ -37,6 +37,8 @@ _Alice's Side_
 3. Decrypt
 4. Reencrypt
 
+--------
+
 1. Generate: consumes the API "/genKeys" - generates keys for several users.
 - Input: None
 - Output (encoded to base 64):
