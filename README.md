@@ -25,5 +25,6 @@ To show the capabilities of NuCypher's Re-Encryption and Umbral, 2 Proofs of Con
 
 # Proxy Re-Encryption
 
-The PoC for this concept is a web interface:
+The PoC for this concept is a web application:
 
+![Proxy Re-Encryption](images/Proxy Re-Encryption.PNG)
