@@ -74,8 +74,9 @@ _Alice's Side_
   - remsg = Reencrypted message with reeK
  
  --------
- 
+
 _Bob's side_
+
 5. DecryptEphKey
 6. Decrypt message
 
