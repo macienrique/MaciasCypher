@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NuCypher Reencryption and Umbral</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container" style="width: 100%;">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-center">NuCypher Reencryption and Umbral</h1>
+          <hr/>
+          <br/>
+          <div id="content">
+			<table class="table">
+			  <tr>
+				<td>
+					<input id="Generate" type="button" value="Generate" class="btn btn-primary" onclick="GenerateKeys();"/>
+					<input id="Encrypt" type="button" value="Encrypt" class="btn btn-primary" onclick="Encrypt();"/>
+				</td>
+				<td><input id="Umbralize" type="button" value="Umbralize" class="btn btn-primary" onclick="Umbralize();"/></td>
+				<td><input id="Decrypt" type="button" value="Decrypt" class="btn btn-primary" onclick="Decrypt();"/></td>	
+			  </tr>
+			  <tr>
+				<td>Alice's Secret Key: <input type="text" id="AliceSK"><br></td>
+				<td>Message: <input type="text" id="msg"><br></td>
+				<td>Bob's Secret Key: <input type="text" id="BobSK"><br></td>
+			  </tr>
+			  <tr>
+				<td>Alice's Public Key: <input type="text" id="AlicePK"><br></td>
+				<td>Encrypted Message: <input type="text" id="emsg"><br></td>
+				<td>Bob's Public Key: <input type="text" id="BobPK"><br></td>
+			  </tr>
+			  <tr>
+				<td>Capsule: <input type="text" id="capsule"><br></td>
+				<td>M: <input type="text" id="M"> of N: <input type="text" id="N"><br></td>
+				<td>M: <input type="text" id="M"> Msg: <input type="text" id="omsg"></td>
+			  </tr>
+			  <tr>
+				<td></td>
+				<td></td>
+				<td>
+					Kfrags<div id='kfrags'><select multiple="multiple" style="width:150px;"></select></div>
+				</td>
+			  </tr>
+			</table>
+            <hr/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/umbralApp.js"></script>
+  </body>
+</html>
+

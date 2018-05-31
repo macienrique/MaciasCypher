@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NuCypher Reencryption and Umbral</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container" style="width: 1500px;">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-center">NuCypher Reencryption and Umbral</h1>
+          <hr/>
+          <br/>
+          <div id="content">
+			<table class="table">
+			  <tr>
+				<td>
+					<input id="Generate" type="button" value="Generate" class="btn btn-primary" onclick="GenerateKeys();"/>
+					<input id="Encrypt" type="button" value="Encrypt" class="btn btn-primary" onclick="EncryptA();"/>
+					<input id="Decrypt" type="button" value="Decrypt" class="btn btn-primary" onclick="DecryptA();"/>
+					<input id="Reencrypt" type="button" value="Reencrypt" class="btn btn-primary" onclick="Reencrypt();"/>
+				</td>
+				<td>
+					Message: <input type="text" id="msg"><br></td>
+				<td>
+					<input id="Decrypt Eph Key" type="button" value="DecryptEphKey" class="btn btn-primary" onclick="DecryptEphKey();"/>
+					<input id="DecryptMessage" type="button" value="Decrypt Message" class="btn btn-primary" onclick="BobDecryptMessage();"/>
+				</td>	
+			  </tr>
+			  <tr>
+				<td>Alice's Secret Key: <input type="text" id="AliceSK"><br></td>
+				<td>Encrypted Message: <input type="text" id="emsg"><br></td>
+				<td>Bob's Secret Key: <input type="text" id="BobSK"><br></td>
+			  </tr>
+			  <tr>
+				<td>Alice's Public Key: <input type="text" id="AlicePK"><br></td>
+				<td>Msg decrypted by Alice's PK: <input type="text" id="AliceDecMsg"><br></td>
+				<td>Bob's Public Key: <input type="text" id="BobPK"><br></td>
+			  </tr>
+			  <tr>
+				<td>Ephimeral Secret Key (EphSK): <input type="text" id="EphSK"><br></td>
+				<td>Reencrypted Message: <input type="text" id="remsg"><br></td>
+				<td>EphSK encrypted with Bob's PK: <input type="text" id="BEphPK"><br></td>
+			  </tr>
+			  <tr>
+                                <td>Reencryption Key (Alice and EphSK): <input type="text" id="reeK"><br></td>
+				<td>Msg decrypted by Bob's EphSK: <input type="text" id="omsg"><br></td>
+				<td>EphSK decrypted with Bob's SK: <input type="text" id="EphPKDec"><br></td>
+			  </tr>
+			</table>
+            <hr/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
+
