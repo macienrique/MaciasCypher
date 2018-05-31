@@ -73,7 +73,14 @@ _Alice's Side_
   - BEphPK = Secret Ephimeral key encrypted with Public key of User B - to be later sent to User B
   - remsg = Reencrypted message with reeK
  
+ --------
+ 
 _Bob's side_
+5. DecryptEphKey
+6. Decrypt message
+
+--------
+
 5. DecryptEphKey: consumes the API "/decryptEphKey" - decrypts the Secret Ephimeral Key with User B's Secret Key - this key is used to finally be able to decrypt the reencrypted message.
 - Input (encoded to base 64):
   - sk_B: Secret Key of User B
